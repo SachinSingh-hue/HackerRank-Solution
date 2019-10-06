@@ -1,0 +1,26 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int[] a = new int[5];
+        for(int i=0; i<5; i++){
+            a[i]=sc.nextInt();
+        }
+        Arrays.sort(a);
+        int s1=0, s2=0;
+        for(int k=0; k<4; k++){
+            s1=s1+a[k];    
+        }
+        for(int l=4; l>0; l--){
+            s2=s2+a[l];    
+        }
+        System.out.println(s1+" "+s2);
+    }
+}
